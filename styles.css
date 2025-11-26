@@ -17,9 +17,6 @@
     margin: 0;
     padding: 0;
 }
-body{
-    background-color: #121212;
-}
 
 header{
     background-color: #000;
@@ -30,6 +27,10 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
 }
 
 .spotify-img{
@@ -53,7 +54,7 @@ header{
     width: fit-content;
     border: 1px solid transparent;
     border-radius: 9999px;
-    font-family: spotify-font;
+    font-family: spotify-bold;
     font-size: 13px;
     font-weight: 700;
     line-height: normal;
@@ -67,6 +68,14 @@ header{
 .song-container{
     display: flex;
     flex-direction: column;
+    background-color: #121212;
+}
+
+.songs-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 56px;
+    background-color: #121212;
 }
 
 .song-section-heading{
@@ -119,6 +128,7 @@ footer{
     padding-inline: 16px;
     padding-top: 8px;
     padding-bottom: 132px;
+    background-color: #121212;
 }
 
 .footer-top{
@@ -128,31 +138,27 @@ footer{
 }
 
 .footer-elements{
-    margin-bottom: 43px;
-}
-
-.footer-elements:nth-child(4){
-    margin-bottom: 41px;
+    margin-bottom: 40px;
 }
 
 .footer-elements-heading{
-    font-family: spotify-font;
+    font-family: spotify-bold;
     font-size: 16px;
     font-weight: 700;
     line-height: normal;
     color: #fff;
-    padding-bottom: 11px;
+    padding-bottom: 8px;
 }
 
 .footer-elements-list{
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 11px;
+    gap: 8px;
 }
 
 .footer-elements-list li{
-    font-family: spotify-font;
+    font-family: spotify-regular;
     font-size: 16px;
     font-weight: 400;
     line-height: normal;
@@ -192,12 +198,11 @@ footer{
 .footer-bottom-list{
     list-style: none;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
 }
 
 .footer-bottom-list li{
-    font-family: spotify-font;
+    font-family: spotify-regular;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -206,8 +211,12 @@ footer{
     margin-bottom: 10px;
 }
 
+.footer-bottom-list li:nth-child(n+4):nth-child(-n+6){
+    margin-bottom: 8px;
+}
+
 .spotify-ab{
-    font-family: spotify-font;
+    font-family: spotify-regular;
     font-size: 14px;
     font-weight: 400;
     line-height: normal;
@@ -215,7 +224,7 @@ footer{
 }
 
 .lang-div{
-    padding-top: 18px;
+    padding-top: 16px;
 }
 
 .lang-button{
@@ -223,13 +232,14 @@ footer{
     border: 1px solid #7c7c7c;
     background-color: #121212;
     width: fit-content;
-    padding-bottom: 5px;
-    padding-top: 7px;
+    padding-bottom: 6px;
+    padding-top: 6px;
     padding-left: 12px;
-    padding-right: 17px;
+    padding-right: 16px;
     display: flex;
     flex-direction: row;
     gap: 8px;
+    align-items: center;
 }
 
 .lang-button img{
@@ -238,10 +248,78 @@ footer{
 }
 
 .lang-button span{
-    font-family: spotify-font;
+    font-family: spotify-bold;
     font-size: 13px;
     font-weight: 700;
     align-items: center;
     line-height: 18px;
     color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-top{
+        flex-direction: row !important;
+        flex-flow: wrap;
+        
+    }
+
+    .footer-elements{
+        margin-right: 24px;
+        width: 40%;
+    }
+
+    .footer-bottom-list li{
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    footer{
+        padding-left: 32px;
+        padding-right: 32px;
+        /* padding-bottom: 140px; */
+    }
+
+    .footer-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 1px solid #292929;
+        margin-top: 32px;
+    }
+
+    .footer-top{
+        flex-wrap: nowrap;
+        margin-top: 0;
+        flex: 1 1 50%;
+        margin-bottom: 2px;
+    }
+
+    .footer-elements{
+        width: 20%;
+        margin-bottom: 38px;
+    }
+
+    .footer-apps-list{
+        border-bottom: none;
+    }
+
+    .footer-bottom{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 36px;
+    }
+
+    .footer-bottom-list li{
+        margin-top: 2px !important;
+    }
+
+    .spotify-ab{
+        padding-right: 16px;
+    }
+
+    .lang-div{
+        display: none;
+    }
 }
