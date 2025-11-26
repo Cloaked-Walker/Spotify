@@ -30,6 +30,10 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
 .spotify-img{
@@ -53,7 +57,7 @@ header{
     width: fit-content;
     border: 1px solid transparent;
     border-radius: 9999px;
-    font-family: spotify-font;
+    font-family: spotify-bold;
     font-size: 13px;
     font-weight: 700;
     line-height: normal;
@@ -67,6 +71,12 @@ header{
 .song-container{
     display: flex;
     flex-direction: column;
+}
+
+.songs-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 56px;
 }
 
 .song-section-heading{
@@ -128,31 +138,27 @@ footer{
 }
 
 .footer-elements{
-    margin-bottom: 43px;
-}
-
-.footer-elements:nth-child(4){
-    margin-bottom: 41px;
+    margin-bottom: 40px;
 }
 
 .footer-elements-heading{
-    font-family: spotify-font;
+    font-family: spotify-bold;
     font-size: 16px;
     font-weight: 700;
     line-height: normal;
     color: #fff;
-    padding-bottom: 11px;
+    padding-bottom: 8px;
 }
 
 .footer-elements-list{
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 11px;
+    gap: 8px;
 }
 
 .footer-elements-list li{
-    font-family: spotify-font;
+    font-family: spotify-regular;
     font-size: 16px;
     font-weight: 400;
     line-height: normal;
@@ -197,7 +203,7 @@ footer{
 }
 
 .footer-bottom-list li{
-    font-family: spotify-font;
+    font-family: spotify-regular;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -206,8 +212,12 @@ footer{
     margin-bottom: 10px;
 }
 
+.footer-bottom-list li:nth-child(n+4):nth-child(-n+6){
+    margin-bottom: 8px;
+}
+
 .spotify-ab{
-    font-family: spotify-font;
+    font-family: spotify-regular;
     font-size: 14px;
     font-weight: 400;
     line-height: normal;
@@ -215,7 +225,7 @@ footer{
 }
 
 .lang-div{
-    padding-top: 18px;
+    padding-top: 16px;
 }
 
 .lang-button{
@@ -223,13 +233,14 @@ footer{
     border: 1px solid #7c7c7c;
     background-color: #121212;
     width: fit-content;
-    padding-bottom: 5px;
-    padding-top: 7px;
+    padding-bottom: 6px;
+    padding-top: 6px;
     padding-left: 12px;
-    padding-right: 17px;
+    padding-right: 16px;
     display: flex;
     flex-direction: row;
     gap: 8px;
+    align-items: center;
 }
 
 .lang-button img{
@@ -238,10 +249,75 @@ footer{
 }
 
 .lang-button span{
-    font-family: spotify-font;
+    font-family: spotify-bold;
     font-size: 13px;
     font-weight: 700;
     align-items: center;
     line-height: 18px;
     color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-content{
+        margin-top: 32px;
+    }
+
+    .footer-top{
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+
+    .footer-elements{
+        width: 40%;
+        margin-right: 24px;
+    }
+
+    .footer-bottom-list li{
+        margin-bottom: 8px !important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    footer{
+        padding-inline: 32px;
+    }
+
+    .footer-top{
+        flex-wrap: nowrap;
+        flex: 1 1 50%;
+    }
+
+    .footer-elements{
+        width: 20%;
+    }
+
+    .footer-content{
+        display: flex;
+        border-bottom: 1px solid #292929;
+    }
+
+    .footer-apps-list{
+        border-bottom: none;
+    }
+
+    .footer-bottom{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-top: 36px;
+    }
+
+    .footer-bottom-list li{
+        margin-top: 2px;
+    }
+
+    .spotify-ab{
+        padding-right: 16px;
+    }
+
+    .lang-div{
+        display: none;
+    }
 }
