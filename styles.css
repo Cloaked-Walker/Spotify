@@ -142,7 +142,7 @@ header {
 
   .home-button {
     background-color: #1f1f1f;
-    border-radius: 50%;
+    border-radius: 50px;
     border: 1px solid transparent;
     padding: 11px;
     align-items: center;
@@ -224,8 +224,7 @@ header {
     font-family: spotify-font;
     font-size: 14px;
     font-weight: 700;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-inline: 8px;
     text-wrap: nowrap;
     letter-spacing: normal;
   }
