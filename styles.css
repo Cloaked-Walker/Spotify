@@ -2,26 +2,21 @@
   font-family: spotify-bold;
   src: url(font/SpotifyMixUI-Bold-4264b799009b1db5c491778b1bc8e5b7.woff2);
 }
-
 @font-face {
   font-family: spotify-regular;
   src: url(font/SpotifyMixUI-Regular-cc3b1de388efa4cbca6c75cebc24585e.woff2);
 }
-
 @font-face {
   font-family: spotify-font;
   src: url(font/SpotifyMixUITitleVariable-8769ccfde3379b7ebcadd9529b49d0cc.woff2);
 }
-
 * {
   margin: 0;
   padding: 0;
 }
-
 body {
   background-color: #121212;
 }
-
 header {
   background-color: #000;
   padding-top: 12px;
@@ -34,54 +29,44 @@ header {
   width: 100%;
   align-items: center;
 }
-
-.spotify-img {
+.header-spotify-img {
   height: fit-content;
   align-self: center;
   padding-left: 16px;
   padding-top: 4px;
 }
-
-.spotify-logo {
+.header-spotify-logo {
   display: none;
 }
-
-.menu-bar {
+.header-menu-icon {
   padding-top: 4px;
+  display: block;
 }
-
-.nav-button {
+.header-left-btn {
   display: none;
 }
-
-.navbar-right {
+.header-right {
   display: flex;
   gap: 16px;
   height: fit-content;
   align-items: center;
 }
-
-.navbar-text {
+.header-link {
   display: none;
 }
-
-.nav-line {
+.horizontal-line {
   display: none;
 }
-
-.install-app {
+.install-btn {
   display: none;
 }
-
-.sign-up {
+.sign_up-btn {
   display: none;
 }
-
-.log-in {
+.log_in-btn {
   display: none;
 }
-
-.open-app {
+.header-open_app-btn {
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -96,51 +81,38 @@ header {
   letter-spacing: normal;
   padding: 8px 15px 8px;
 }
-
-.menu-bar {
+.header-menu-icon {
   padding-right: 16px;
 }
-
 @media screen and (min-width: 960px) {
   header {
     padding-top: 8px;
     padding-bottom: 8px;
   }
-
-  .open-app {
+  .header-open_app-btn {
     display: none;
   }
-
-  .menu-bar {
+  .header-menu-icon {
     display: none;
   }
-
-  .navbar-left {
-    display: flex;
-  }
-
-  .spotify-img {
+  .header-spotify-img {
     display: none;
   }
-
-  .spotify-logo {
+  .header-spotify-logo {
     padding-left: 28px;
     padding-right: 12px;
     display: block;
   }
-
-  .spotify-logo img {
+  .header-spotify-logo img {
     padding-top: 4px;
   }
-
-  .nav-button {
+  .header-left-btn {
     display: flex;
     gap: 8px;
     padding-left: 16px;
     width: 100%;
   }
-
-  .home-button {
+  .header-home-btn {
     background-color: #1f1f1f;
     border-radius: 50px;
     border: 1px solid transparent;
@@ -149,8 +121,7 @@ header {
     display: flex;
     justify-content: center;
   }
-
-  .search-button {
+  .header-search {
     background-color: #1f1f1f;
     border-radius: 50px;
     border: none;
@@ -158,26 +129,21 @@ header {
     align-items: center;
     display: flex;
   }
-
-  .home-button img {
+  .header-home-btn img {
     height: 24px;
     width: 24px;
   }
-
-  .search-button img {
+  .header-search img {
     height: 24px;
     width: 24px;
   }
-
-  .search-input {
+  .header-search-field {
     display: none;
   }
-
-  .navbar-right {
+  .header-right {
     gap: 8px;
   }
-
-  .navbar-text {
+  .header-link {
     display: flex;
     background-color: transparent;
     color: #b3b3b3;
@@ -189,16 +155,14 @@ header {
     border: none;
     text-decoration: none;
   }
-
-  .nav-line {
+  .horizontal-line {
     display: block;
     height: 25px;
     width: 1px;
     background-color: #fff;
     margin-inline: 16px;
   }
-
-  .install-app {
+  .install-btn {
     display: flex;
     background-color: transparent;
     color: #b3b3b3;
@@ -211,12 +175,10 @@ header {
     text-wrap: nowrap;
     letter-spacing: normal;
   }
-
-  .install-app img {
+  .install-btn img {
     padding-right: 8px;
   }
-
-  .sign-up {
+  .sign_up-btn {
     display: flex;
     background-color: transparent;
     border: 1px solid transparent;
@@ -228,8 +190,7 @@ header {
     text-wrap: nowrap;
     letter-spacing: normal;
   }
-
-  .log-in {
+  .log_in-btn {
     display: flex;
     border: 1px solid transparent;
     border-radius: 50px;
@@ -238,49 +199,44 @@ header {
     align-items: center;
     justify-content: center;
     margin-right: 8px;
-  }
-
-  .log-in span {
     font-family: spotify-bold;
     font-size: 16px;
     font-weight: 700;
     color: #000;
     text-wrap: nowrap;
-    letter-spacing: normal;
-    line-height: normal;
   }
 }
-
 @media screen and (min-width: 1069px) {
-  .nav-button {
+  .header-left-btn {
     padding-right: 8px;
   }
-
-  .search-button {
+  .header-search {
     width: 100%;
+    max-width: 450px;
+    padding-block: 0px;
   }
-
-  .search-input {
+  .header-search-field {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
   }
-
-  .search-input input {
+  .header-search-field input {
     background-color: transparent;
     border: none;
     padding-left: 12px;
+    padding-top: 2px;
+    min-width: 185px;
+    width: 100%;
   }
-
-  .search-input input::placeholder {
+  .header-search-field input::placeholder {
     text-overflow: ellipsis;
     font-family: spotify-regular;
     font-size: 16px;
     font-weight: 400;
     color: #b3b3b3;
   }
-
-  .search-input img {
+  .header-search-field img {
     padding-left: 12px;
     padding-right: 4px;
     border-left: 1px solid #7c7c7c;
