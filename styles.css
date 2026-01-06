@@ -242,3 +242,12 @@ header {
     border-left: 1px solid #7c7c7c;
   }
 }
+@media screen and (min-width: 1723px) {
+  .header-left-btn {
+    padding: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    justify-content: center;
+  }
+}
