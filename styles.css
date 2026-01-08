@@ -2,22 +2,18 @@
   font-family: spotify-regular;
   src: url(font/SpotifyMixUI-Regular-cc3b1de388efa4cbca6c75cebc24585e.woff2);
 }
-
 @font-face {
   font-family: spotify-bold;
   src: url(font/SpotifyMixUI-Bold-4264b799009b1db5c491778b1bc8e5b7.woff2);
 }
-
 @font-face {
   font-family: spotify-font;
   src: url(font/SpotifyMixUITitleVariable-8769ccfde3379b7ebcadd9529b49d0cc.woff2);
 }
-
-*{
+* {
   padding: 0;
   margin: 0;
 }
-
 header {
   background-color: #000;
   padding-top: 12px;
@@ -85,17 +81,14 @@ header {
 .header-menu-icon {
   padding-right: 16px;
 }
-
-body{
+body {
   padding-top: 56px;
   background-color: #121212;
 }
-
-.cards-section{
+.card-container {
   padding-left: 8px;
 }
-
-.cards-section h2{
+.card-container h2 {
   color: #fff;
   font-family: spotify-font;
   font-size: 20px;
@@ -104,30 +97,34 @@ body{
   margin-bottom: 12px;
   padding-inline: 8px;
 }
-
-.cards-row{
+.card-container-row {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
   scrollbar-width: none;
   padding-right: 8px;
 }
-
-.cards{
+.spotify-song-card,
+.spotify-artist-card,
+.spotify-album-card,
+.spotify-radio-card,
+.spotify-top-song-card {
   display: flex;
   flex-direction: column;
   padding: 8px;
   gap: 8px;
 }
-
-.cards img{
+.spotify-song-card img,
+.spotify-artist-card img,
+.spotify-album-card img,
+.spotify-radio-card img,
+.spotify-top-song-card img {
   height: 152px;
   width: 152px;
   border-radius: 4px;
   object-fit: cover;
 }
-
-.no-content{
+.no-content {
   background-color: #282828;
   height: 152px;
   width: 152px;
@@ -136,33 +133,33 @@ body{
   justify-content: center;
   align-items: center;
 }
-
-.no-content img{
+.no-content img {
   height: 45.59px;
   width: 45.59px;
 }
-
-.cards span{
+.spotify-song-card span,
+.spotify-artist-card span,
+.spotify-album-card span,
+.spotify-radio-card span,
+.spotify-top-song-card span {
   color: #fff;
   font-family: spotify-regular;
   font-weight: 400;
   font-size: 16px;
   text-wrap: wrap;
 }
-
-.mobile-bottom-nav{
+.mobile-bottom-nav {
   display: flex;
   flex-direction: row;
   height: 70px;
   background: transparent;
-  background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9), #121212);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9), #121212);
   position: sticky;
   bottom: 0;
   justify-content: center;
   align-items: center;
 }
-
-.bottom-nav-item{
+.bottom-nav-item {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -170,13 +167,11 @@ body{
   justify-content: center;
   align-items: center;
 }
-
-.bottom-nav-item img{
+.bottom-nav-item img {
   height: 24px;
   width: 24px;
 }
-
-.bottom-nav-item span{
+.bottom-nav-item span {
   color: #b3b3b3;
   font-family: spotify-regular;
   font-size: 11px;
