@@ -114,3 +114,244 @@ body{
   font-size: 11px;
   font-weight: 400;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #121212;
+}
+header {
+  background-color: #000;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  align-items: center;
+}
+.header-spotify-img {
+  height: fit-content;
+  align-self: center;
+  padding-left: 16px;
+  padding-top: 4px;
+}
+.header-spotify-logo {
+  display: none;
+}
+.header-menu-icon {
+  padding-top: 4px;
+  display: block;
+}
+.header-left-btn {
+  display: none;
+}
+.header-right {
+  display: flex;
+  gap: 16px;
+  height: fit-content;
+  align-items: center;
+}
+.header-link {
+  display: none;
+}
+.horizontal-line {
+  display: none;
+}
+.install-btn {
+  display: none;
+}
+.sign_up-btn {
+  display: none;
+}
+.log_in-btn {
+  display: none;
+}
+.header-open_app-btn {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  font-family: spotify-bold;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: normal;
+  padding: 8px 15px 8px;
+}
+.header-menu-icon {
+  padding-right: 16px;
+}
+@media screen and (min-width: 960px) {
+  header {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .header-open_app-btn {
+    display: none;
+  }
+  .header-menu-icon {
+    display: none;
+  }
+  .header-spotify-img {
+    display: none;
+  }
+  .header-spotify-logo {
+    padding-left: 28px;
+    padding-right: 12px;
+    display: block;
+  }
+  .header-spotify-logo img {
+    padding-top: 4px;
+  }
+  .header-left-btn {
+    display: flex;
+    gap: 8px;
+    padding-left: 16px;
+    width: 100%;
+  }
+  .header-home-btn {
+    background-color: #1f1f1f;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    padding: 11px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .header-search {
+    background-color: #1f1f1f;
+    border-radius: 50px;
+    border: none;
+    padding: 12px;
+    align-items: center;
+    display: flex;
+  }
+  .header-home-btn img {
+    height: 24px;
+    width: 24px;
+  }
+  .header-search img {
+    height: 24px;
+    width: 24px;
+  }
+  .header-search-field {
+    display: none;
+  }
+  .header-right {
+    gap: 8px;
+  }
+  .header-link {
+    display: flex;
+    background-color: transparent;
+    color: #b3b3b3;
+    font-family: spotify-font;
+    font-size: 16px;
+    text-wrap: nowrap;
+    font-weight: 700;
+    letter-spacing: normal;
+    border: none;
+    text-decoration: none;
+  }
+  .horizontal-line {
+    display: block;
+    height: 25px;
+    width: 1px;
+    background-color: #fff;
+    margin-inline: 16px;
+  }
+  .install-btn {
+    display: flex;
+    background-color: transparent;
+    color: #b3b3b3;
+    border: 1px solid transparent;
+    font-family: spotify-bold;
+    font-size: 14px;
+    font-weight: 700;
+    padding-right: 14px;
+    padding-left: 11px;
+    text-wrap: nowrap;
+    letter-spacing: normal;
+  }
+  .install-btn img {
+    padding-right: 8px;
+  }
+  .sign_up-btn {
+    display: flex;
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: #b3b3b3;
+    font-family: spotify-font;
+    font-size: 14px;
+    font-weight: 700;
+    padding-inline: 8px;
+    text-wrap: nowrap;
+    letter-spacing: normal;
+  }
+  .log_in-btn {
+    display: flex;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    width: 108.3px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    font-family: spotify-bold;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    text-wrap: nowrap;
+  }
+}
+@media screen and (min-width: 1069px) {
+  .header-left-btn {
+    padding-right: 8px;
+  }
+  .header-search {
+    width: 100%;
+    max-width: 450px;
+    padding-block: 0px;
+  }
+  .header-search-field {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-search-field input {
+    background-color: transparent;
+    border: none;
+    padding-left: 12px;
+    padding-top: 2px;
+    min-width: 185px;
+    width: 100%;
+  }
+  .header-search-field input::placeholder {
+    text-overflow: ellipsis;
+    font-family: spotify-regular;
+    font-size: 16px;
+    font-weight: 400;
+    color: #b3b3b3;
+  }
+  .header-search-field img {
+    padding-left: 12px;
+    padding-right: 4px;
+    border-left: 1px solid #7c7c7c;
+  }
+}
+@media screen and (min-width: 1723px) {
+  .header-left-btn {
+    padding: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    justify-content: center;
+  }
+}
