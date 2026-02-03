@@ -397,16 +397,9 @@ body {
   }
 
   .spotify-content {
-    /* border-radius: 8px;
-    gap: 16px;
-    overflow-y: scroll;
-    height: calc(100vh - 74px);
-    scrollbar-width: 12px;
-    display: flex;
-    flex-direction: column; */
     border-radius: 8px;
     overflow-y: auto;
-    height: 100%; /* Change from calc */
+    height: 100%; 
     scrollbar-width: 12px;
     display: flex;
     flex-direction: column;
