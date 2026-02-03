@@ -145,7 +145,7 @@ body {
   font-size: 16px;
   text-wrap: wrap;
 }
-.spotify-content-card-description{
+.spotify-content-card-description {
   display: none;
 }
 .mobile-bottom-nav {
@@ -180,10 +180,14 @@ body {
   font-size: 11px;
   font-weight: 400;
 }
-.spotify-preview-banner{
+.spotify-preview-banner {
   display: none;
 }
 @media screen and (min-width: 960px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
   header {
     padding-top: 8px;
     padding-bottom: 8px;
@@ -311,16 +315,21 @@ body {
     gap: 8px;
     padding-top: 8px;
     padding-inline: 8px;
+    height: calc(100vh - 64px - 82px);
   }
   .spotify-library {
     display: flex;
     flex-direction: column;
     background-color: #121212;
+    flex-basis: 25%; 
     min-width: 280px;
+    max-width: 420px;
+    flex-shrink: 0;
+    flex-grow: 0;
     border-radius: 8px;
-    min-height: 678px;
     height: 100%;
     gap: 24px;
+    overflow-y: auto;
   }
   .spotify-library-header {
     display: flex;
@@ -343,14 +352,14 @@ body {
     padding: 10px 9px 8px 8px;
   }
 
-  .spotify-library-content{
+  .spotify-library-content {
     display: flex;
     flex-direction: column;
     padding: 0px 8px 8px;
     gap: 8px;
   }
 
-  .spotify-library-list{
+  .spotify-library-list {
     background-color: #1f1f1f;
     display: flex;
     flex-direction: column;
@@ -359,14 +368,14 @@ body {
     border-radius: 8px;
   }
 
-  .spotify-library-list-title{
+  .spotify-library-list-title {
     font-family: spotify-bold;
     font-size: 16px;
     font-weight: 700;
     color: #fff;
   }
 
-  .spotify-library-list-text{
+  .spotify-library-list-text {
     font-family: spotify-regular;
     font-size: 14px;
     font-weight: 400;
@@ -375,7 +384,7 @@ body {
     padding-bottom: 20px;
   }
 
-  .spotify-library-list-button{
+  .spotify-library-list-button {
     padding-inline: 15px;
     padding-block: 5px;
     border: 1px solid transparent;
@@ -384,14 +393,20 @@ body {
     font-family: spotify-bold;
     font-size: 14px;
     font-weight: 700;
-    width: fit-content
+    width: fit-content;
   }
 
   .spotify-content {
-    border-radius: 8px;
+    /* border-radius: 8px;
     gap: 16px;
     overflow-y: scroll;
-    height: 678px;
+    height: calc(100vh - 74px);
+    scrollbar-width: 12px;
+    display: flex;
+    flex-direction: column; */
+    border-radius: 8px;
+    overflow-y: auto;
+    height: 100%; /* Change from calc */
     scrollbar-width: 12px;
     display: flex;
     flex-direction: column;
@@ -427,7 +442,7 @@ body {
     padding-top: 12px;
     padding-left: 28px;
   }
-  .spotify-content-card{
+  .spotify-content-card {
     padding: 8px 12px 12px;
   }
   .spotify-content-cards img {
@@ -444,21 +459,23 @@ body {
     border-radius: 50% !important;
     height: 153.79px;
   }
-  .spotify-content-card-description{
+  .spotify-content-card-description {
     display: block;
     font-family: spotify-regular;
     font-size: 14px;
     font-weight: 400;
     color: #b3b3b3;
     margin-top: -4px;
+    max-width: 153.719px;
   }
-  .spotify-content-radio-card{
+  .spotify-content-radio-card {
     display: none;
   }
   .mobile-bottom-nav {
     display: none;
   }
-  .spotify-preview-banner{
+
+  .spotify-preview-banner {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -471,27 +488,27 @@ body {
     padding-right: 24px;
   }
 
-  .spotify-preview-content{
+  .spotify-preview-content {
     display: flex;
     flex-direction: column;
     padding-top: 1px;
   }
 
-  .spotify-preview-title{
+  .spotify-preview-title {
     font-family: spotify-bold;
     font-size: 14px;
     font-weight: 700;
     color: #fff;
   }
 
-  .spotify-preview-text{
+  .spotify-preview-text {
     font-family: spotify-regular;
     font-size: 16px;
     font-weight: 400;
     color: #fff;
   }
 
-  .spotify-preview-signup-button{
+  .spotify-preview-signup-button {
     display: flex;
     justify-content: center;
     align-items: center;
