@@ -321,14 +321,14 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #121212;
-    flex-basis: 25%; 
+    flex-basis: 29.5%;
     min-width: 280px;
     max-width: 420px;
     flex-shrink: 0;
     flex-grow: 0;
     border-radius: 8px;
     height: 100%;
-    gap: 24px;
+    gap: 26px;
     overflow-y: auto;
   }
   .spotify-library-header {
@@ -344,12 +344,18 @@ body {
     color: #fff;
     font-weight: 700;
     margin-left: 4px;
-    margin-bottom: 2px;
   }
   .spotify-library-add-button {
-    background-color: transparent;
+    background-color: #1f1f1f;
     border: none;
-    padding: 10px 9px 8px 8px;
+    padding: 10px 8px 8px 8px;
+    border-radius: 50px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .spotify-library-add-button span{
+    display: none;
   }
 
   .spotify-library-content {
@@ -399,7 +405,7 @@ body {
   .spotify-content {
     border-radius: 8px;
     overflow-y: auto;
-    height: 100%; 
+    height: 100%;
     scrollbar-width: 12px;
     display: flex;
     flex-direction: column;
@@ -451,6 +457,7 @@ body {
     text-wrap: wrap;
     border-radius: 50% !important;
     height: 153.79px;
+    box-shadow: 0 8px 24px #00000080;
   }
   .spotify-content-card-description {
     display: block;
@@ -548,6 +555,27 @@ body {
     padding-left: 12px;
     padding-right: 4px;
     border-left: 1px solid #7c7c7c;
+  }
+  .spotify-library-add-button{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    height: fit-content;
+  }
+  .spotify-library-add-button img{
+    width: 16px;
+    height: 16px;
+  }
+  .spotify-library-add-button span{
+    font-family: spotify-bold;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    display: block;
   }
 }
 @media screen and (min-width: 1723px) {
